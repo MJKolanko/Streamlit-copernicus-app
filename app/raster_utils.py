@@ -13,24 +13,21 @@ def read_band(item, band_name, geometries, reference_profile=None):
     gdf = gpd.GeoDataFrame(geometry=geometries, crs="EPSG:4326")
 
     with rasterio.open(href) as src:
-        # --- AOI → CRS rastra ---
         if gdf.crs != src.crs:
             gdf = gdf.to_crs(src.crs)
 
         shapes = [geom.__geo_interface__ for geom in gdf.geometry]
 
-        # 🔑 mask BEZ nan
         out_image, out_transform = mask(
             src,
             shapes,
             crop=True,
             filled=True,
-            nodata=src.nodata,  # ← ważne
+            nodata=src.nodata,  
         )
 
         band = out_image[0].astype("float32")
 
-        # 🔑 nodata → nan
         if src.nodata is not None:
             band[band == src.nodata] = np.nan
 
@@ -42,7 +39,6 @@ def read_band(item, band_name, geometries, reference_profile=None):
             dtype="float32",
         )
 
-        # --- RESAMPLING DO REFERENCJI ---
         if reference_profile is not None:
             resampled = np.empty(
                 (reference_profile["height"], reference_profile["width"]),
