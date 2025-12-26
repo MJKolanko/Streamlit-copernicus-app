@@ -56,7 +56,7 @@ Użytkownik rysuje jeden lub więcej poligonów bezpośrednio na mapie.
 - zakres dat
 - maksymalne zachmurzenie
 
-![Sidebar](docs/images/2.png)
+![Sidebar](docs/images/11.png)
 
 ---
 
@@ -64,7 +64,9 @@ Użytkownik rysuje jeden lub więcej poligonów bezpośrednio na mapie.
 
 Raster indeksu wyświetlany jest z odpowiednią paletą barw oraz legendą.
 
-![Index Map](docs/images/3.png)
+![Index Map](docs/images/5.png)
+![Index Map](docs/images/8.png)
+![Index Map](docs/images/2.png)
 
 ---
 
@@ -74,9 +76,11 @@ Raster indeksu wyświetlany jest z odpowiednią paletą barw oraz legendą.
 - statystyki globalne
 - eksport do CSV
 
+![Histogram](docs/images/6.png)
+![Histogram](docs/images/7.png)
+![Histogram](docs/images/9.png)
+![Histogram](docs/images/10.png)
+![Histogram](docs/images/3.png)
 ![Histogram](docs/images/4.png)
 
----
-
-## 🏗️ Struktura repozytorium
 
