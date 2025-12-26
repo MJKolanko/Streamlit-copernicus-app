@@ -1,0 +1,12 @@
+streamlit
+streamlit-folium
+folium
+geopandas
+rasterio
+numpy
+matplotlib
+pystac-client
+planetary-computer
+shapely
+pyproj
+osmnx

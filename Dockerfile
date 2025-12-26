@@ -1,0 +1,16 @@
+FROM python:3.11-slim
+
+WORKDIR /app
+
+RUN apt-get update && apt-get install -y \
+    gdal-bin \
+    libgdal-dev \
+    build-essential
+
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+COPY app/ app/
+
+EXPOSE 8501
+CMD ["streamlit", "run", "app/main.py", "--server.address=0.0.0.0"]
