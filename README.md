@@ -23,8 +23,6 @@ Interaktywna aplikacja webowa do analizy **indeksów spektralnych Sentinel-2**
 ✔️ mapa rastra + histogram wartości  
 ✔️ statystyki globalne (mean, min, max, std)  
 ✔️ eksport wyników do CSV  
-✔️ cache zapytań STAC  
-✔️ pełna obsługa CRS i resamplingu pasm  
 ✔️ uruchamianie w Dockerze
 
 ---
